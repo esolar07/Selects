@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <title>{% block title %}Selects {% endblock title %}</title>
+  <meta name="description" content="Selects">
+  <meta name="author" content="Eddie Solar">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="stylesheet/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src=""></script>
+  {% endblock head %}
+</head>
+
+<body>
+
+
+
+  <header>
+    <h1>Selects</h1>
+    <nav>
+      <a href="{{ baseUrl() }}" class="selected">Examples</a>
+      <a href="{{ siteUrl('/contact') }">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+	{% block content %}
+    
+	{% endblock content %}
+  </main>
+
+  <footer>
+	{% block footer %}
+    <nav>
+      <a href="{{ baseUrl() }}" class="selected">Examples</a>
+      <a href="{{ siteUrl('/contact') }">Contact</a>
+    </nav>
+	{% endblock footer %}
+  </footer>
+
+</body>
+</html>
