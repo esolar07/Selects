@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit6b244fb6da5293e7081b24a416165de3
 {
     public static $files = array (
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 

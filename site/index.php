@@ -36,6 +36,32 @@ $app->get("/contact", function() use($app){
 	$app->render( "contact.twig");
 })->name('Contact');
 
+$app->post("/contact", function() use($app){
+	// var_dump($app->request->post());
+	$name = $app->request->post('name');
+	$email = $app->request->post('email');
+	$msg = $app->request->post('message');
+	
+	// checks to see input is not empty
+	if(!empty($name) && !empty($email) && !empty($msg)){
+		$cleanName = filter_var($name, FILTER_SANITIZE_STRING);
+		$cleanEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+		$cleanMsg = filter_var($msg, FILTER_SANITIZE_STRING);		
+	} else {
+		$app->redirect('/contact');
+	}
+	$transport = Swift_SendmailTransport::newIntance('/usr/sbin/sendmail -bs');
+	$mailer = \Swift_Mailer::newIntance($transport);
+	
+	$message = \Swift_Message::newIntance();
+	$message -> setSubject("Email form Selects site");
+	$message -> setFrom(array(
+		$cleanName => $cleanEmail;
+	));
+	$message -> setTo(array("esolar07@gmail.com"));
+	$message -> setBody($cleanMsg);
+});
+
 $app->run();
 
 

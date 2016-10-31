@@ -3,20 +3,25 @@
 {% block content %}
 
 <section class="l-container">
-  <form action="" class="form">
+  <form action="" method="post" class="form">
+  
+	<fieldset>
+	  <label class="form__label" for="">Full Name</label>
+      <input class="form__input" type="text" name="name" placeholder="Enter full name" required />
+    </fieldset>
+	
     <fieldset>
       <label class="form__label" for="">EMAIL</label>
-      <input class="form__input" type="text" placeholder="Enter email address" required />
+      <input class="form__input" name="email" placeholder="Enter email address" required />
     </fieldset>
+	
     <fieldset>
-    <label class="form__label" for="">Full Name</label>
-      <input class="form__input" type="text" placeholder="Enter full name" required />
+      <label class="form__label" for="">Message</label>
+      <input class="form__input" type="text" name="msg" placeholder="Comments" required />
     </fieldset>
-    <fieldset>
-      <label class="form__label" for="">PASSWORD</label>
-      <input class="form__input" type="text" placeholder="Comments" required />
-    </fieldset>
-    <input class="form__submit is-btn-hovered" type="submit" value="Send Email">
+	
+    <input class="form__submit is-btn-hovered" type="submit" value="Submit">
+	
   </form>
 </section>
 
