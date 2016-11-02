@@ -1,0 +1,119 @@
+/************* 
+States
+**************/
+
+/************* contact form btn hover color **************/
+
+.is-btn-hovered:hover{
+  background: $special-hov-color;
+}
+
+/************* keyframes for example **************/
+
+
+/* keyframe for expanding innner circle */
+@keyframes expandRadioCir{
+  from{
+    opacity:0;
+    transform: scale(0);
+  } 
+  to{
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+/* keyframe for exploding innner circle */
+@keyframes explodeRadioCir{
+  0%{
+    opacity:1;
+    transform: scale(1);
+  } 
+  50%{
+    opacity:0;
+    transform: scale(0);
+  } 
+  100%{
+    opacity:1;
+    background:$radio-btn-circle;
+    transform: scale(1);
+  }
+}
+
+/* keyframe for radio button flip */
+@keyframes flipRadioCir{
+  from{
+    transform: rotateY(0deg);
+  } 
+  to{
+    background:$radio-btn-circle;
+    transform: rotateY(180deg);
+  }
+}
+
+/* keyframe for radio button flip */
+@keyframes fadeRadioCir{
+  0%{
+    background:transparent;
+  } 
+  100%{
+    background:$radio-btn-circle;
+  } 
+}
+
+  
+/* keyframe for check button check */
+@keyframes checkBtnChk{
+  0%{
+    height:25px
+  } 
+  100%{
+    top: 10px;
+    left: -30px;
+    height:0px;
+    transform: rotate(-52deg);
+  } 
+}
+
+/* keyframe for check button check 2 */
+@keyframes checkBtnChk2{
+  from{
+    opacity:0;
+  } 
+  to{
+    top:15px;
+    left: -33px;
+    height:5px;
+    width:10px;
+    opacity:1;
+    transform: rotate(40deg);
+  }
+}
+
+/* keyframe for check button x */
+@keyframes checkBtnX{
+  0%{
+    height:25px
+  } 
+  100%{
+    top: 10px;
+    left: -40px;
+    height:0px;
+    transform: rotate(-50deg);
+  } 
+}
+
+/* keyframe for check button x 2 */
+@keyframes checkBtnX2{
+  from{
+    opacity:0;
+  } 
+  to{
+    top:10px;
+    left: -40px;
+    height:4px;
+    width:25px;
+    opacity:1;
+    transform: rotate(40deg);
+  }
+}

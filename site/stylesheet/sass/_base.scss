@@ -1,12 +1,50 @@
 
 
 
-// base
+/************* 
+Base
+**************/
+
 html, body{
   box-sizing: border-box;
   width:100%;
+  background: linear-gradient(to right, $mainColor, $mainColor2);
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+fieldset{
+  border: none;
+}
+
+input[type=submit]{
+  border:none;
+  font-size:1em;
+}
+
+a{
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    color:white;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+img {
+    max-width: 100%;
 }

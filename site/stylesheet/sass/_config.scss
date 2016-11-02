@@ -1,3 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+$mainColor: #43cea2;
+$mainColor2: #185a9d;
+$header-bg: #FFFFFF;
+$font: 'Raleway', sans-serif;
+$text-color: #FFFFFF;
+$radio-btn-border: #FFFFFF;
+$radio-btn-circle: #FFFFFF;
+$header: #000000;
+$checkbox-check-color: green;
 
 
-$mainColor: #48D1CC;
+
+// default height and width for radio button
+$radio-btn-width:25px;
+$radio-btn-height:25px;
+
+// contact form variables
+$transparent-bg: rgba(#EEEEEE, .9);
+$special-color: #b19a9a;
+$special-hov-color: #906f6f;
+
+// mixin for radio button
+@mixin radio-wh($w:$radio-btn-width, $h:$radio-btn-height){
+  width:$w;
+  height:$h;
+}
+
+// mixin for centering
+
+@mixin center(){
+  margin-right:auto;
+  margin-left:auto;
+}

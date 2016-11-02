@@ -36,6 +36,8 @@ $app->get("/contact", function() use($app){
 	$app->render( "contact.twig");
 })->name('Contact');
 
+
+// contact form mailer 
 $app->post("/contact", function() use($app){
 	// var_dump($app->request->post());
 	$name = $app->request->post('name');
@@ -56,10 +58,21 @@ $app->post("/contact", function() use($app){
 	$message = \Swift_Message::newIntance();
 	$message -> setSubject("Email form Selects site");
 	$message -> setFrom(array(
-		$cleanName => $cleanEmail;
+		$cleanEmail => $cleanName
 	));
 	$message -> setTo(array("esolar07@gmail.com"));
 	$message -> setBody($cleanMsg);
+	
+	$result = $mailer -> send($message);
+	
+	if( $result > 0){
+		// sends message if successful and redirects back to home
+		$app->redirect('/');
+	} else {
+		// sends message to user the message failed and redirects back to contact
+		$app->redirect('/contact');
+		
+	}
 });
 
 $app->run();
