@@ -19,18 +19,25 @@
 
 
   <header class="l-head">
-	<div class="nav">
+	<nav class="nav">
 		<div class="nav__info">
 			<div class="nav__logo">
 			  <img src="img/selects-logo.png" alt="Selects" />
 			</div>
 			<p class="nav__header">Selects</p>
 		</div>
-		<nav class="nav__menu">
-		  <a href="{{ baseUrl() }}" class="selected">Examples</a>
-		  <a href="{{ siteUrl('/contact') }}">Contact</a>
-		</nav>
-	</div>
+		<ul class="nav__menu">
+		  <li class="nav__item selected">
+			<a href="{{ baseUrl() }}">Home</a>
+		  </li>
+		  <li class="nav__item">
+			<a href="{{ siteUrl('/examples') }}">Examples</a>
+		  </li>
+		  <li class="nav__item">
+			<a href="{{ siteUrl('/contact') }}">Contact</a>
+		  </li>
+		</ul>
+	</nav>
   </header>
 
   <main>

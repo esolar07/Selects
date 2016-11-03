@@ -1,0 +1,27 @@
+{% extends 'main.twig' %}
+
+{% block content %}
+
+<section class="l-container">
+
+	<div class="info info--intro">
+		<p>A collection of checkbox animations made in CSS / Sass using the "Checkbox Hack". There is <strong>no javascript </strong> used. The checkboxes use the<code> &ltlabel&gt </code> element for their inputs and hide checkbox inputs due to their limited CSS support. By using a <code>for</code> attribute on the <code> &ltlabel&gt </code> element, you tell the browser which label belongs which input. </p>
+		<code>
+			&ltlabel for="myName"&gtLabel&lt/label&gt </br>
+			&ltinput name="myName" /&gt
+		</code>
+		<p>Animations are created using the keyframe animations. Some also include the <code>:before</code> and <code>:after</code> pseudo elements of labels. These can be used in real world projects, take a look at the code on <a href="https://github.com/esolar07/Selects">Github</a> .</p>
+	</div>
+	<div class="info info--support">
+		<p>These checkboxes will work in all the major browsers:</p>
+		<ul>
+			<li>Google Chrome</li>
+			<li>FireFox</li>
+			<li>Internet Explorer</li>
+			<li>Opera</li>
+			<li>Safari</li>
+		</ul>
+	</div>
+</section>
+
+{% endblock content %}

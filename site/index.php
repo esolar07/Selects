@@ -29,6 +29,10 @@ $view->parserExtensions = array(
 
 // routing
 $app->get("/", function() use($app){
+	$app->render("home.twig");
+})->name('Home');
+
+$app->get("/examples", function() use($app){
 	$app->render("examples.twig");
 })->name('Examples');
 

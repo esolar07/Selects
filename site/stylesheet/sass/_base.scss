@@ -8,6 +8,7 @@ Base
 html, body{
   box-sizing: border-box;
   width:100%;
+  font-family: $font-paragraph;
   background: linear-gradient(to right, $mainColor, $mainColor2);
 }
 
@@ -30,6 +31,7 @@ input[type=submit]{
   font-size:1em;
 }
 
+
 a{
   &:link {
     text-decoration: none;
@@ -47,4 +49,8 @@ a{
 
 img {
     max-width: 100%;
+}
+
+ul{
+	list-style-type: none;
 }

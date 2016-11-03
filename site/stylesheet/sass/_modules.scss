@@ -22,6 +22,7 @@ Modules
 		flex-direction:row;
 	}
 	&__header{
+		font-family: $font-heading;
 		font-size: 30px;
 		font-weight: bolder;
 		font-style: normal;
@@ -41,8 +42,20 @@ Modules
 			margin-top: 80px;
 		}
 	}
-	.nav__menu{
-		width: 50%;
+	&__menu{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		@include center;
+		width: 80%;
+		@media only screen and (min-width: 650px){
+			width: 50%;
+		}
+	}
+	&__item{
+		margin: 15px;
+		color: black;
+		font-size: 20px;
 	}
 }
 
