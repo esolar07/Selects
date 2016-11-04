@@ -40,7 +40,7 @@ a{
     text-decoration: none;
   }
   &:hover {
-    color:white;
+    text-decoration: none;
   }
   &:active {
     text-decoration: none;
@@ -54,3 +54,20 @@ img {
 ul{
 	list-style-type: none;
 }
+
+code {
+    font-family: monospace, monospace;
+    font-size: 1em;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+

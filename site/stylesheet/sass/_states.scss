@@ -2,11 +2,17 @@
 States
 **************/
 
+
+.is-Nav-Item-Hovered:hover{
+	color: #185a9d;
+}
+
 /************* contact form btn hover color **************/
 
 .is-btn-hovered:hover{
   background: $special-hov-color;
 }
+
 
 /************* keyframes for example **************/
 

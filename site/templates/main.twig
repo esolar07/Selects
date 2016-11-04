@@ -27,14 +27,11 @@
 			<p class="nav__header">Selects</p>
 		</div>
 		<ul class="nav__menu">
-		  <li class="nav__item selected">
+		  <li class="nav__item is-Nav-Item-Hovered">
 			<a href="{{ baseUrl() }}">Home</a>
 		  </li>
-		  <li class="nav__item">
+		  <li class="nav__item is-Nav-Item-Hovered">
 			<a href="{{ siteUrl('/examples') }}">Examples</a>
-		  </li>
-		  <li class="nav__item">
-			<a href="{{ siteUrl('/contact') }}">Contact</a>
 		  </li>
 		</ul>
 	</nav>
@@ -47,12 +44,14 @@
 	{% endblock content %}
   </main>
 
-  <footer>
+  <footer class="l-footer">
 	{% block footer %}
-    <nav>
-      <a href="{{ baseUrl() }}" class="selected">Examples</a>
-      <a href="{{ siteUrl('/contact') }}">Contact</a>
-    </nav>
+    <ul class="footer">
+	  <li class="footer__item"> Made by Eddie Solar - </li>
+	  <li class="footer__item">View the source on 
+		<a href="https://github.com/esolar07/Selects">Github</a>
+	  </li>
+    </ul>
 	{% endblock footer %}
   </footer>
 

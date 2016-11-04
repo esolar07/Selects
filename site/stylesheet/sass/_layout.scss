@@ -10,8 +10,21 @@
 }
 
 .l-container{
-  margin-top:20px;
+  margin-top:75px;
+  margin-bottom: 50px;
   @include center;
   padding-top: 50px;
   width:80%;
+  color: white;
+  font-size: 25px;
+}
+
+.l-footer{
+	position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: white;
+	text-algin:center;
 }

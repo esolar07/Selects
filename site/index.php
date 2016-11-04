@@ -35,11 +35,11 @@ $app->get("/", function() use($app){
 $app->get("/examples", function() use($app){
 	$app->render("examples.twig");
 })->name('Examples');
-
+/*
 $app->get("/contact", function() use($app){
 	$app->render( "contact.twig");
 })->name('Contact');
-
+*/
 
 // contact form mailer 
 $app->post("/contact", function() use($app){

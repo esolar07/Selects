@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Anton|Open+Sans+Condensed:300");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Raleway");
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -409,7 +409,7 @@ Base
 html, body {
   box-sizing: border-box;
   width: 100%;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Raleway", sans-serif;
   background: linear-gradient(to right, #43cea2, #185a9d); }
 
 *, *:before, *:after {
@@ -430,7 +430,7 @@ a:link {
 a:visited {
   text-decoration: none; }
 a:hover {
-  color: white; }
+  text-decoration: none; }
 a:active {
   text-decoration: none; }
 
@@ -439,6 +439,11 @@ img {
 
 ul {
   list-style-type: none; }
+
+code {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  color: black; }
 
 /************* 
  Layout
@@ -449,11 +454,23 @@ ul {
   background-color: #FFFFFF; }
 
 .l-container {
-  margin-top: 20px;
+  margin-top: 75px;
+  margin-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 50px;
-  width: 80%; }
+  width: 80%;
+  color: white;
+  font-size: 25px; }
+
+.l-footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: white;
+  text-algin: center; }
 
 /************* 
 Modules
@@ -476,7 +493,7 @@ Modules
     display: flex;
     flex-direction: row; }
   .nav__header {
-    font-family: "Anton", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 30px;
     font-weight: bolder;
     font-style: normal;
@@ -507,7 +524,15 @@ Modules
   .nav__item {
     margin: 15px;
     color: black;
-    font-size: 20px; }
+    font-size: 25px;
+    font-weight: bolder; }
+
+/************* Home Page **************/
+homeInfo__support {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: flex-wrap;
+  width: 70%; }
 
 /************* Examples Form **************/
 input[type='radio'], input[type='checkbox'] {
@@ -671,9 +696,24 @@ fieldset {
     font-size: 13px;
     color: #b19a9a; }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%; }
+  .footer__item {
+    color: black;
+    font-size: 25px;
+    font-weight: bolder; }
+
 /************* 
 States
 **************/
+.is-Nav-Item-Hovered:hover {
+  color: #185a9d; }
+
 /************* contact form btn hover color **************/
 .is-btn-hovered:hover {
   background: #906f6f; }

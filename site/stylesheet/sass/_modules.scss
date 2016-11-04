@@ -55,10 +55,27 @@ Modules
 	&__item{
 		margin: 15px;
 		color: black;
-		font-size: 20px;
+		font-size: 25px;
+		font-weight: bolder;
 	}
 }
 
+
+/************* Home Page **************/
+
+
+homeInfo{
+
+	&__support{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: flex-wrap;
+		width:70%;
+	}
+	&__browser{
+		
+	}
+}
 
 
 /************* Examples Form **************/
@@ -246,4 +263,21 @@ fieldset{
     font-size: 13px;
     color:$special-color;
   }
+}
+
+
+
+
+.footer{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+	&__item{
+		color: black;
+		font-size: 25px;
+		font-weight: bolder;
+	}
 }
