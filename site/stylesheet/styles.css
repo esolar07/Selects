@@ -425,14 +425,16 @@ input[type=submit] {
   border: none;
   font-size: 1em; }
 
-a:link {
-  text-decoration: none; }
-a:visited {
-  text-decoration: none; }
-a:hover {
-  text-decoration: none; }
-a:active {
-  text-decoration: none; }
+a {
+  color: black; }
+  a:link {
+    text-decoration: none; }
+  a:visited {
+    text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+  a:active {
+    text-decoration: none; }
 
 img {
   max-width: 100%; }
@@ -484,7 +486,7 @@ Modules
   justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
-  width: 70%;
+  width: 90%;
   height: inherit; }
   @media only screen and (min-width: 650px) {
     .nav {
@@ -499,7 +501,8 @@ Modules
     font-style: normal;
     background: -webkit-linear-gradient(#43cea2, #185a9d);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    height: 100%; }
     @media only screen and (min-width: 650px) {
       .nav__header {
         font-size: 60px; } }
@@ -514,25 +517,49 @@ Modules
   .nav__menu {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     margin-right: auto;
     margin-left: auto;
     width: 80%; }
     @media only screen and (min-width: 650px) {
       .nav__menu {
-        width: 50%; } }
+        justify-content: flex-end;
+        width: 60%; } }
   .nav__item {
-    margin: 15px;
-    color: black;
+    margin-right: 15px;
+    padding: 5px 10px;
+    height: 40px;
     font-size: 25px;
-    font-weight: bolder; }
+    font-weight: bolder;
+    border: 2px solid #185a9d;
+    transition: all .7s; }
+    .nav__item a {
+      color: #185a9d;
+      transition: all .7s; }
 
 /************* Home Page **************/
-homeInfo__support {
+.homeInfo h1, .homeInfo h3 {
+  text-shadow: 0 0 25px black; }
+.homeInfo__support {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: flex-wrap;
-  width: 70%; }
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%; }
+.homeInfo__browser:after {
+  content: "\2713";
+  padding-left: 6px;
+  color: green;
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow: 0 0 30px black; }
+
+.ghlink {
+  color: #43cea2;
+  text-decoration: underline !important;
+  transition: all .7s; }
 
 /************* Examples Form **************/
 input[type='radio'], input[type='checkbox'] {
@@ -698,20 +725,26 @@ fieldset {
 
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  width: 80%; }
+  width: 80%;
+  text-align: center; }
   .footer__item {
     color: black;
-    font-size: 25px;
+    font-size: 17px;
     font-weight: bolder; }
 
 /************* 
 States
 **************/
 .is-Nav-Item-Hovered:hover {
+  background: #185a9d; }
+  .is-Nav-Item-Hovered:hover a {
+    color: white; }
+
+.isghink-hovered:hover {
   color: #185a9d; }
 
 /************* contact form btn hover color **************/
